@@ -50,8 +50,7 @@ if(isset($_GET['failure']))
 {
  ?> 
  <div class="alert alert-warning">
-    <strong>SORRY!</strong> ERROR while Loging in !
- 
+    <strong>SORRY!</strong> ERROR while Loging in ! 
  </div>
     <?php
 }
@@ -65,17 +64,14 @@ if(isset($_GET['failure']))
                       <div class="form-outline mb-4">
                         <input name="password" type="password" id="typePasswordX-2" class="form-control form-control-lg" required/>
                         <label class="form-label" for="typePasswordX-2">Password</label>
-                      </div>
-          
-                    
+                      </div> 
                       <button name="submit" class="btn btn-primary btn-lg btn-block" type="submit">Login</button>
           
                       <hr class="my-2">
-                        <!-- Checkbox -->
+         
                         <div class="form-check d-flex justify-content-start mb-4">
-                        <label class="form-check-label" for="form1Example3">No Account ? <a href="Sign-Up.php">Create your Own</a></label>
+                        <label class="form-check-label" for="form1Example3">Create your Account Here <a href="Sign-Up.php">Create your Own</a></label>
                       </div>
-          
                       </form>
                     </div>
                   </div>
