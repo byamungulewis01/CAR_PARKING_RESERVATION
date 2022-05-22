@@ -8,9 +8,24 @@
        <section>
         <div class="row">
           <div class="col-xl-6 col-md-12 mb-4">
+          <?php
+if(isset($_GET['exist']))
+{
+ ?>
+ <div class="alert alert-danger">
+    <strong>HeY!</strong> This Car Stiss In Parking
+ </div>
+ <?php
+ }
+ ?>
  
 <?php
-              
+              if(!isset($_GET['id']))
+              {
+                $_GET['id'] = "";
+              }
+              ?>
+              <?php
                  include_once 'conn.php';
                  $ParkingId = $_GET['id'];
                  $sql = 'SELECT * FROM parkings WHERE id=:id';
@@ -60,8 +75,9 @@
                         <!-- 2 column grid layout with text inputs for the first and last names -->
                         <div class="row">
                           <div class="col-md-12 mb-2">
+   
                             <div class="form-outline">
-                            
+
                             <input type="hidden" name="p_owner" value="<?php echo $p_owner; ?>">
                               <input type="hidden" name="driverid" value="<?php echo $driverid; ?>">
                               <input type="hidden" name="parkingid" value="<?php echo $ParkingId; ?>">
@@ -87,6 +103,7 @@
                       </form>
              <?php 
               }
+            
              ?>
               </div>
             </div>
