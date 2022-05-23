@@ -68,7 +68,16 @@ else if(isset($_GET['failure']))
     <?php
 }
 ?>
-
+  <?php
+if(isset($_GET['exist']))
+{
+ ?>
+   
+ <div class="alert alert-danger">
+    <strong>SORRY!</strong> This Email Alreard Used!
+ 
+ </div>
+<?php } ?>
                       <form method="post" action="config/sign_up.php">
                         <!-- 2 column grid layout with text inputs for the first and last names -->
                         <div class="row">
